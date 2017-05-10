@@ -1,22 +1,25 @@
 /* Debug BOX*/
+
+
 /*body * {
     display: block;
     min-width: 20px;
     min-height: 20px;
     border: solid 1px red;
 }*/
+
+
 /* END Debug BOX*/
 
 body {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    background: blue;
+    background: linear-gradient(to bottom, white, black);
     flex-wrap: nowrap;
     margin: 0px;
     min-height: 100vh;
 }
-
 
 
 /*=======================
@@ -26,17 +29,18 @@ body {
 =======================*/
 
 nav {
+    background: url(../img/background_header.png);
+    border-bottom: 1px solid black;
     display: flex;
-    background: yellow;
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: center;    
+    align-items: center;
     position: fixed;
     left: 0px;
-    top:0px;
+    top: 0px;
     margin: 0px;
-    width: 100vw;
+    width: 100%;
 }
 
 
@@ -50,21 +54,21 @@ nav {
     -ms-transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
-    margin: 2vw;
-    width: 5vw;
+    margin: 2%;
+    width: 5%;
     min-width: 45px;
 }
 
 @keyframes logo_anim {
     from {
-    -ms-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
     }
     to {
-    -ms-transform: rotate(315deg);
-    -webkit-transform: rotate(315deg);
-    transform: rotate(315deg);
+        -ms-transform: rotate(315deg);
+        -webkit-transform: rotate(315deg);
+        transform: rotate(315deg);
     }
 }
 
@@ -75,50 +79,57 @@ nav {
     animation-timing-function: linear;
 }
 
+
 /*======== NAV ==========
 =========================
 ========= MAIN ==========
 =========================
 =======================*/
 
-nav > main > ul {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 50vw;
+ul {
     list-style: none;
 }
 
-nav > main > ul > li {
+.link {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 50vw;
+    padding: 0;
+}
+
+.link a {
+    text-decoration: none;
+    color: black;
     display: inline-block;
     text-align: center;
-    line-height: 4vw;
+    line-height: 100%;
     border: 2px solid black;
     background: orangered;
-    padding: 1vw;
-    height: 4vw;
-    width: 4vw;
-    min-height: 30px;
-    min-width: 30px;
+    /*font-size: calc((2.8vw + 2.8vh)/4);*/
+    font-size: 1em;
+    margin: 0 3vw;
+    height: calc(2.8vw + 2.8vh);
+    width: calc(2.8vw + 2.8vh);
     -ms-transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
 
-nav > main > ul > li:hover {
+.link>a:hover {
     border: 4px solid black;
-    background: orangered;
-    padding: 1vw;
-    margin: -2px;
-    height: 4vw;
-    width: 4vw;
-    min-height: 30px;
-    min-width: 30px;
-    -ms-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+    margin: -2px calc(3vw - 2px);
 }
+
+.link>li>ul {
+    display: none;
+}
+
+.link>li:hover>ul {
+    position: absolute;
+    display: block;
+}
+
 
 /*======== NAV ==========
 =========================
@@ -126,45 +137,12 @@ nav > main > ul > li:hover {
 ======== MEDIA! =========
 =======================*/
 
-@media screen and (max-width: 480px) {
-    nav > main > ul {
-        display: flex;
-        justify-content: space-around;
-        flex-direction: row;
-        flex-wrap: nowrap;
+@media screen and (max-width: 640px) {
+    .link {
         width: 75vw;
-        list-style: none;
-    }
-
-    nav > main > ul > li {
-        text-align: center;
-        border: 2px solid black;
-        background: orangered;
-        padding: 1vw;
-        line-height: 4vw;
-        height: 4vw;
-        width: 4vw;
-        min-height: 30px;
-        min-width: 30px;
-        -ms-transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-    }
-
-    nav > main > ul > li:hover {
-        border: 4px solid black;
-        background: orangered;
-        padding: 1vw;
-        margin: -2px;
-        height: 4vw;
-        width: 4vw;
-        min-height: 30px;
-        min-width: 30px;
-        -ms-transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
-        transform: rotate(-45deg);
     }
 }
+
 
 /*=======================
 =========================
@@ -172,11 +150,13 @@ nav > main > ul > li:hover {
 =========================
 =======================*/
 
-body > main {
-    padding-top: 110px;
+body>main {
+    padding-top: calc(5vw + 5vh);
     margin: 0px 10vw;
-    background: green;
+    height: 80vh;
+    background: white;
 }
+
 
 /*=======================
 =========================
@@ -194,7 +174,7 @@ footer {
     align-content: center;
 }
 
-footer > ul {
+footer>ul {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
@@ -204,11 +184,11 @@ footer > ul {
 }
 
 
-
 /*=======================
 ======== LE CARRE =======
 ===== SUPER MAGIQUE =====
 =======================*/
+
 
 /*@keyframes carre {
     0% {

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +8,51 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Digitaru Camera</title>
 </head>
+
 <body>
     <!--la navigation du site et le logo-->
     <nav>
         <a href="/"><img src="img/logo.png" alt="digitarucamera logo" id="logo"></a>
-        <main>
-            <ul>
-                <li>µtropper</li>
-                <li>NekoLoli</li>
-                <li>Projets</li>
-                <li>Contact</li>
+        <section title="main_nav">
+            <ul class="link">
+                <li><a href="">µtropper</a>
+                    <ul class="under_link">
+                        <li><a href="">A propos</a></li>
+                        <li><a href="">Download</a></li>
+                        <li><a href="">Forum</a></li>
+                        <li><a href="">Réseaux_Sociaux</a></li>
+                    </ul>
+                </li>
+                <li><a href="">NekoLoli</a>
+                    <ul class="under_link">
+                        <li><a href="">A propos</a></li>
+                        <li><a href="">Download</a></li>
+                        <li><a href="">Forum</a></li>
+                        <li><a href="">Réseaux_Sociaux</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Projets</a>
+                    <ul class="under_link">
+                        <li><a href="">En_cours</a></li>
+                        <li><a href="">Idées</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Contact</a></li>
             </ul>
-        </main>
+        </section>
     </nav>
     <!--le main du site avec toute les information-->
     <main>
         <h2>Présentation</h2>
+        <pre id="board1"></pre>
+        <script>
+            "use strict";
+            UpdateID = setInterval(Update, 1000);
+
+            function Update() {
+
+            }
+        </script>
     </main>
     <!--<div id="carre_rouge"></div>-->
     <footer>
@@ -35,4 +65,5 @@
         </ul>
     </footer>
 </body>
+
 </html>
